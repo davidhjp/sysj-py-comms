@@ -14,7 +14,7 @@ $ ./gradlew run -Ptarget=rpi_local.xml
 
 ### Temperature, humidity and light values
 
-Each of these values are 2 bytes long (big-endian), and are computed by the following rules:
+Each of these values is 2 bytes long (big-endian), computed using the following rules:
 
 - Temperature: `First byte + Second byte / 100` Celcius
 - Humidity: `First byte + Second byte / 100` %RH
