@@ -2,7 +2,7 @@
 
 Python library to enable communication with SystemJ program.
 
-Packet format can be found at [sysj-ems](https://github.com/hjparker/sysj-ems).
+*IMPORTANT* - Packet formats for the I/O signals can be found at [sysj-ems](https://github.com/hjparker/sysj-ems).
 
 ## Running a SystemJ example program in `sysj-ems`
 
@@ -10,7 +10,9 @@ Packet format can be found at [sysj-ems](https://github.com/hjparker/sysj-ems).
 $ ./gradlew run -Ptarget=rpi_local.xml
 ```
 
-## Temperature, humidity and light values
+## Additional infomation on the `SysJOutput` module
+
+### Temperature, humidity and light values
 
 Each of these values are 2 bytes long (big-endian), and are computed by the following rules:
 
@@ -19,7 +21,7 @@ Each of these values are 2 bytes long (big-endian), and are computed by the foll
 - Light: `((First byte << 8) + Second byte) * 16` Lux
 
 
-## Packet types for the `SysJOutput` module
+### Packet types
 - `0x84` - Temperature, humidity and light.
 - `0x30` - Turned on(1) or off(0).
 - `0x31` - Instantaneous power (W).
